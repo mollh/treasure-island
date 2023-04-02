@@ -26,24 +26,20 @@ print("Your mission is to find the treasure.")
 #https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
 
 #Write your code below this line 👇
-left_or_right = input("Will you go left towards the river or right towards the forest? Left or right.\n")
-
-lower_left_or_right = left_or_right.lower()
-if lower_left_or_right == "right":
-  print("You are eaten alive by a herd of zombie bunnies. GAME OVER")
-elif lower_left_or_right == "left":
-  swim_or_wait = input("You're at the river. You've noticed a panther has been stalking you. You have to cross the river, but crocodiles are slowly swimming by. Do you swim now or wait? Swim or wait.\n")
-  lower_swim_or_wait = swim_or_wait.lower()
-  if lower_swim_or_wait == "swim":
-    print("You made it past the crocodiles. You make it to the other side of the river, but a family of kangaroos attack and drown you in the shallow end of the river. GAME OVER")
-  elif lower_swim_or_wait == "wait":
-    which_door = input("You waited for the crocodiles to pass and were ready to fight the panther with your bare hands. As the panther got closer, you realized it was a winged unicorn. You jumped on the unicorn and it flew you across the river. As you get off the unicorn, you see three doors; a blue door, a red door, and a yellow door. Which color door do you choose to open? Blue, red, or yellow.\n")
-    lower_which_door = which_door.lower()
-    if lower_which_door == "blue":
+left_or_right = input("Will you go left towards the river or right towards the forest? Left or right.\n").lower()
+if left_or_right == "right":
+  print("You're eaten alive by a herd of zombie bunnies. GAME OVER")
+elif left_or_right == "left":
+  swim_or_wait = input("You're at the river. You notice a panther is stalking you. You have to cross the river, but crocodiles are slowly swimming by. Do you swim now or wait? Swim or wait.\n").lower()
+  if swim_or_wait == "swim":
+    print("You make it past the crocodiles to the other side of the river, but a family of kangaroos attack and drown you in the shallow end of the river. GAME OVER")
+  elif swim_or_wait == "wait":
+    which_door = input("You wait for the crocodiles to pass and prepare to fight the panther with your bare hands. As the panther approaches, you realize it is a winged unicorn. You mount the unicorn and it flies you across the river. You dismount the unicorn and walk up a windy staircase leading to a large stone wall with three doors side by side ; a blue door, a red door, and a yellow door. Which color door do you choose to open? Blue, red, or yellow.\n").lower()
+    if which_door == "blue":
       print("You are sucked into a blackhole. GAME OVER")
-    elif lower_which_door == "red":
+    elif which_door == "red":
       print("You fall into hell and are tortured forever. GAME OVER")
-    elif lower_which_door == "yellow":
+    elif which_door == "yellow":
       print("Congratulations! You found the treasure and live happily ever after!")
     else:
       print("GAME OVER. You will fail at real life because you can't accurately type colors.")
